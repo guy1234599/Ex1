@@ -11,9 +11,7 @@ public class Ex1 {
         if (s.matches(regex)){
             return true;
         }
-//        if (!(s.indexOf(ch) != -1)) {
-//            if (s.matches("[A-G]")) { // אם הבסיס הוא אות
-//               return  true;}}
+
 
         // פיצול הקלט לפי "b"
         String[] parts = s.split("b");
@@ -50,26 +48,8 @@ if ((!parts[0].matches("^[0-9A-G]+$"))||(equals(parts[0],parts[1]))){
         }
         return true;
 
-        // בדיקת תקינות המספר
-//        try {
-//            // המרת המספר לערך עשרוני לפי הבסיס
-//            int number = Integer.parseInt(numberPart, base);
-//            // בדיקה אם המספר גדול או שווה ל-16
-//            return ;
-//        } catch (NumberFormatException e) {
-//            return false; // המספר לא תקין עבור הבסיס
-//        }
     }
 
-
-
-
-//    public static boolean isDecimalNumber(String s) {
-//        if ( s== null || s.isEmpty()) return false;
-//
-//        String regex = "^-?\\d+$";
-//        return s.matches(regex);
-//    }
 
     public static int number2Int(String s ) {
         int value=0 , temp = 0 ,temp2=0 , ans=0;
@@ -97,15 +77,7 @@ if ((!parts[0].matches("^[0-9A-G]+$"))||(equals(parts[0],parts[1]))){
             base = Integer.parseInt(basePart);
         }
         ans= Integer.parseInt(numberPart, base);
-  ; //char [] digits = parts[0].toCharArray();
 
-//        for ( int i =0 ;i< digits.length; i++){
-//            if (String.valueOf(digits[i]).matches("[A-F]")) { // אם הבסיס הוא אות
-//                temp += ((10 + (basePart.charAt(0) - 'A'))+temp*10); // המרה מ-A ל-10, B ל-11 וכו'
-//            } else { // אם הבסיס הוא מספר
-//                temp += (Integer.parseInt(String.valueOf(digits[i]))+temp*10);
-//            }
-//        }
         return ans;
 
 
@@ -133,25 +105,7 @@ public static int maxIndex(String[] arr) {
 
     return ans;
 }
-//    public static String int2Number(int number, int base){
-//        String ans="";
-//
-//        StringBuilder result = new StringBuilder();
-//        int quotient = number;
-//        while (quotient > 0) {
-//            int remainder = quotient % base;
-//            char digit = (char) (remainder < 10 ? '0' + remainder : 'A' + (remainder - 10));
-//            result.insert(0, digit);
-//            quotient /= base;
-//        }
-//        ans= result.toString();
-//        if(number<0||base<2||base>16){
-//            ans="";}
-//
-//
-//        return ans=ans+"b"+base;
-//
-//    }
+
 public static String int2Number(int number, int base) {
     // בדיקת תוקף הקלט
     if (number < 0 || base < 2 || base > 16) {

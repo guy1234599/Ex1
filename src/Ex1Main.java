@@ -56,4 +56,3 @@ public class Ex1Main {
 
     }
 }
-//"b2", "2b2", "1G3bG", " BbG", "0bbA", "abB", "!@b2", "A", "1bb2"
